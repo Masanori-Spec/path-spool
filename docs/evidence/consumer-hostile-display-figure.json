@@ -1,0 +1,89 @@
+{
+  "data": [
+    {
+      "type": "sankey",
+      "orientation": "h",
+      "valueformat": ".0f",
+      "node": {
+        "pad": 18,
+        "thickness": 16,
+        "label": [
+          "s1n1 · &lt;b&gt;Alias&lt;/b&gt; &amp; \"text\"",
+          "s1n2 · 'single' &amp;quot; &amp;#39;",
+          "s2n1 · &lt;i&gt;End&lt;/i&gt;"
+        ],
+        "customdata": [
+          {
+            "id": "s1n1",
+            "stage": 1,
+            "label": "<img src=x onerror=\"window.__plotlyInjected=1\">",
+            "displayLabel": "<b>Alias</b> & \"text\"",
+            "missing": false
+          },
+          {
+            "id": "s1n2",
+            "stage": 1,
+            "label": "ordinary",
+            "displayLabel": "'single' &quot; &#39;",
+            "missing": false
+          },
+          {
+            "id": "s2n1",
+            "stage": 2,
+            "label": "<i>end</i>",
+            "displayLabel": "<i>End</i>",
+            "missing": false
+          }
+        ]
+      },
+      "link": {
+        "source": [
+          0,
+          1
+        ],
+        "target": [
+          2,
+          2
+        ],
+        "value": [
+          2,
+          1
+        ],
+        "customdata": [
+          {
+            "id": "l1",
+            "boundary": 1,
+            "rows": [
+              1
+            ]
+          },
+          {
+            "id": "l2",
+            "boundary": 1,
+            "rows": [
+              2
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "layout": {
+    "title": {
+      "text": "Literal &lt;b&gt;title&lt;/b&gt; &amp; text \"quoted\" 'single'"
+    },
+    "font": {
+      "family": "Arial, sans-serif",
+      "size": 12
+    },
+    "meta": {
+      "generator": "PathSpool 0.1.0",
+      "policy": "sentinel",
+      "stageNames": [
+        "Before",
+        "After"
+      ],
+      "limitation": "Adjacent links do not encode full-path correlation. Retain normalized paths and contributions."
+    }
+  }
+}

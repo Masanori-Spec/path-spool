@@ -1,0 +1,5 @@
+{
+  "schema": "pathspool.exclusions.v1",
+  "policy": "sentinel",
+  "exclusions": []
+}

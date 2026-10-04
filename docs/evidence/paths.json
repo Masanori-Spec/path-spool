@@ -1,0 +1,109 @@
+{
+  "schema": "pathspool.paths.v1",
+  "policy": "sentinel",
+  "stages": [
+    "Discovery",
+    "Session",
+    "Next step"
+  ],
+  "nodes": [
+    {
+      "id": "s1n1",
+      "stage": 0,
+      "label": "Newsletter",
+      "missing": false,
+      "index": 0,
+      "displayLabel": null
+    },
+    {
+      "id": "s1n2",
+      "stage": 0,
+      "label": "Friend",
+      "missing": false,
+      "index": 1,
+      "displayLabel": null
+    },
+    {
+      "id": "s2n1",
+      "stage": 1,
+      "label": "Design lab",
+      "missing": false,
+      "index": 2,
+      "displayLabel": null
+    },
+    {
+      "id": "s2n2",
+      "stage": 1,
+      "label": "Research lab",
+      "missing": false,
+      "index": 3,
+      "displayLabel": null
+    },
+    {
+      "id": "s2n3",
+      "stage": 1,
+      "label": null,
+      "missing": true,
+      "index": 4,
+      "displayLabel": null
+    },
+    {
+      "id": "s3n1",
+      "stage": 2,
+      "label": "Prototype",
+      "missing": false,
+      "index": 5,
+      "displayLabel": null
+    },
+    {
+      "id": "s3n2",
+      "stage": 2,
+      "label": "Share notes",
+      "missing": false,
+      "index": 6,
+      "displayLabel": null
+    }
+  ],
+  "paths": [
+    {
+      "row": 1,
+      "itemId": "p01",
+      "weight": 3,
+      "nodeIds": [
+        "s1n1",
+        "s2n1",
+        "s3n1"
+      ]
+    },
+    {
+      "row": 2,
+      "itemId": "p02",
+      "weight": 2,
+      "nodeIds": [
+        "s1n2",
+        "s2n1",
+        "s3n1"
+      ]
+    },
+    {
+      "row": 3,
+      "itemId": "p03",
+      "weight": 1,
+      "nodeIds": [
+        "s1n1",
+        "s2n2",
+        "s3n2"
+      ]
+    },
+    {
+      "row": 4,
+      "itemId": "p04",
+      "weight": 4,
+      "nodeIds": [
+        "s1n2",
+        "s2n3",
+        "s3n1"
+      ]
+    }
+  ]
+}

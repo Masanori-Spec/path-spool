@@ -1,0 +1,8 @@
+Source,Target,Value,Step from,Step to,Source label,Target label,Source missing,Target missing,Link ID,Source display label,Target display label
+s1n1,s2n1,3,1,2,Newsletter,Design lab,false,false,l1,,
+s1n1,s2n2,1,1,2,Newsletter,Research lab,false,false,l2,,
+s1n2,s2n1,2,1,2,Friend,Design lab,false,false,l3,,
+s1n2,s2n3,4,1,2,Friend,,false,true,l4,,
+s2n1,s3n1,5,2,3,Design lab,Prototype,false,false,l5,,
+s2n2,s3n2,1,2,3,Research lab,Share notes,false,false,l6,,
+s2n3,s3n1,4,2,3,,Prototype,true,false,l7,,

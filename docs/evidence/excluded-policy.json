@@ -1,0 +1,14 @@
+{
+  "schema": "pathspool.exclusions.v1",
+  "policy": "exclude",
+  "exclusions": [
+    {
+      "row": 4,
+      "itemId": "p04",
+      "weight": 4,
+      "missingStages": [
+        1
+      ]
+    }
+  ]
+}

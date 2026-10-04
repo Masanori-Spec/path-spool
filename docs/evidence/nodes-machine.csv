@@ -1,0 +1,8 @@
+ID,Index,Stage,Stage name,Label,Missing,Display label
+s1n1,0,1,Discovery,Newsletter,false,
+s1n2,1,1,Discovery,Friend,false,
+s2n1,2,2,Session,Design lab,false,
+s2n2,3,2,Session,Research lab,false,
+s2n3,4,2,Session,,true,
+s3n1,5,3,Next step,Prototype,false,
+s3n2,6,3,Next step,Share notes,false,

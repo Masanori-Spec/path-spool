@@ -1,0 +1,173 @@
+{
+  "data": [
+    {
+      "type": "sankey",
+      "orientation": "h",
+      "valueformat": ".0f",
+      "node": {
+        "pad": 18,
+        "thickness": 16,
+        "label": [
+          "s1n1 · Newsletter",
+          "s1n2 · Friend",
+          "s2n1 · Design lab",
+          "s2n2 · Research lab",
+          "s2n3 · ∅ missing",
+          "s3n1 · Prototype",
+          "s3n2 · Share notes"
+        ],
+        "customdata": [
+          {
+            "id": "s1n1",
+            "stage": 1,
+            "label": "Newsletter",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s1n2",
+            "stage": 1,
+            "label": "Friend",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n1",
+            "stage": 2,
+            "label": "Design lab",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n2",
+            "stage": 2,
+            "label": "Research lab",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n3",
+            "stage": 2,
+            "label": null,
+            "displayLabel": null,
+            "missing": true
+          },
+          {
+            "id": "s3n1",
+            "stage": 3,
+            "label": "Prototype",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s3n2",
+            "stage": 3,
+            "label": "Share notes",
+            "displayLabel": null,
+            "missing": false
+          }
+        ]
+      },
+      "link": {
+        "source": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          3,
+          4
+        ],
+        "target": [
+          2,
+          3,
+          2,
+          4,
+          5,
+          6,
+          5
+        ],
+        "value": [
+          3,
+          1,
+          2,
+          4,
+          5,
+          1,
+          4
+        ],
+        "customdata": [
+          {
+            "id": "l1",
+            "boundary": 1,
+            "rows": [
+              1
+            ]
+          },
+          {
+            "id": "l2",
+            "boundary": 1,
+            "rows": [
+              3
+            ]
+          },
+          {
+            "id": "l3",
+            "boundary": 1,
+            "rows": [
+              2
+            ]
+          },
+          {
+            "id": "l4",
+            "boundary": 1,
+            "rows": [
+              4
+            ]
+          },
+          {
+            "id": "l5",
+            "boundary": 2,
+            "rows": [
+              1,
+              2
+            ]
+          },
+          {
+            "id": "l6",
+            "boundary": 2,
+            "rows": [
+              3
+            ]
+          },
+          {
+            "id": "l7",
+            "boundary": 2,
+            "rows": [
+              4
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "layout": {
+    "title": {
+      "text": "Workshop journeys"
+    },
+    "font": {
+      "family": "Arial, sans-serif",
+      "size": 12
+    },
+    "meta": {
+      "generator": "PathSpool 0.1.0",
+      "policy": "sentinel",
+      "stageNames": [
+        "Discovery",
+        "Session",
+        "Next step"
+      ],
+      "limitation": "Adjacent links do not encode full-path correlation. Retain normalized paths and contributions."
+    }
+  }
+}

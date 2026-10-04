@@ -1,69 +1,54 @@
 # Verification record
 
-Local build stage, 2026-10-04. This record distinguishes executed checks from authored future checks.
+## Final code evidence
 
-## Executed locally
+[Hosted run 37182530119](https://github.com/Masanori-Spec/path-spool/actions/runs/37182530119) passed on source commit `e2059584c53ec28006211fc27ed7666318d9789e`:
 
-`npm run check` passes syntax validation, a runtime no-network-call guard, **141 tests**, and the static build.
+- All five jobs passed
+- **141 tests** passed on each Node 22 / 24 × UTC / Asia/Tokyo combination, plus syntax/runtime-network checks and static build
+- **19 sandboxed Chromium scenarios** passed: the original 18 application scenarios and one five-fixture Plotly consumer scenario
+- No uncaught application or consumer errors; no external application/consumer requests in the checked flows
 
-- **11 final reviewer tests**: 64 inverse export-kit checks, five corruption rejections, four finding regressions, maximum Unicode and low-heap budgets, and actual handlers; see [independent review](INDEPENDENT_REVIEW.md)
-- **77 independent model/input tests**: Python structured tuples reconstruct nodes, links, weights, paths, exclusions and row provenance without importing production code
-- **2,193 valid compiled cases**: includes 1,692 exhaustive small patterns and 480 seeded cases, both missing policies, maximum bounds and boundary conservation
-- **17 mutation self-checks**: deliberately corrupt output identity, weight, row provenance, paths or exclusions; the independent oracle rejects all
-- **162 delimiter quoting combinations** plus malformed CSV/TSV, duplicate JSON keys, Unicode, controls, field and size caps
-- **12 display-label tests**: bound source identities, duplicate display names, escaped overrides, strict schema and two additional independent-oracle policy cases
-- **13 export tests**: Python CSV/HTML parsing, Flourish step/value/identity bindings, Plotly indices and layout metadata, escaping, spreadsheet-mode changes and project round trips
-- **17 state tests**: atomic apply/revert, exact source regeneration, six newer-action file-read races, stale failures, repeated reads, actual Blob malformed UTF-8 and valid U+FFFD
-- **11 actual UI handler tests** using a deliberately limited DOM double: draft locks, language preservation, mapping failure, sample cancellation, filters, keyboard selection/focus and file import
+The model checks include 2,193 independently reconstructed Python cases, additional display-policy checks, 64 independently parsed export kits and deliberate corruption rejection. The [independent review](INDEPENDENT_REVIEW.md) records the model findings and repairs before hosted browser execution. Its historical pending-browser statements are superseded by this record; its finite-test limitations still apply.
 
-The DOM double verifies event/state behavior only. It does not establish layout, accessibility-tree behavior, browser parsing, downloads or print appearance.
+## Actual downloads and interfaces
 
-The oracle worker also audited exports read-only across both policies and CSV modes with independent parsers. Findings corrected before this record: Plotly metadata location, negative-zero mapping rejection, direct-JS serialization hooks, and guide filenames.
+The application scenarios exercised policy changes and conservation, stale-export locks, invalid/reverted mappings, display overrides, quoted multiline input, formulas as text, sample replacement cancellation, repeated imports, malformed UTF-8, delayed-read races, keyboard focus, link filtering, provenance pagination, high-cardinality ID staging, maximum bounds and hostile/wide labels.
 
-## Authored, not run locally
+All nine actual UI downloads were compared with deterministic exports. A separate Python check parsed the downloaded CSV/JSON and reconstructed values and provenance from the original synthetic rows. The sample has four records, seven nodes and seven links, with exact weight 10 at both boundaries. Every complete source path and contribution is retained. The maximum downloaded project has 5,000 rows and its contribution file has 25,000 entries, exactly five per row. The guide contains no active content or external assets; its official documentation links are ordinary hyperlinks.
 
-The GitHub workflow has Node 22/24 × UTC/Tokyo model jobs and an Ubuntu 22.04 Chromium job using `chromiumSandbox: true`. Nineteen browser scenarios cover:
+Desktop English/Japanese, English/Japanese at 768, 390 and 320 pixels, maximum bounds and wide-label screenshots were inspected. No page-wide overflow or overlapping controls was found. Wide flow diagrams scroll inside their own region. The two-page A4 guide PDF was rendered and inspected; text, totals and node lookup are intact. The screen-print partial-view notice was checked in the browser; it is not a claim that a filtered screen print contains the complete export.
 
-1. Initial sample totals, unique IDs and seven links
-2. Keyboard link selection and Japanese interface
-3. Missing-policy draft lock and 10/6 conservation
-4. Invalid role mapping and revert
-5. Display overrides, unchanged link identities and original path evidence
-6. Malformed CSV, language preservation, quoted multiline TSV and formulas as text
-7. Sample replacement cancellation and confirmation
-8. All nine deterministic downloads and JSON reimport
-9. Machine versus spreadsheet CSV and exact JSON evidence
-10. Repeated files, malformed UTF-8 and valid U+FFFD
-11. Delayed file-read replacement race
-12. Link filtering and provenance pagination
-13. High-cardinality ID staging before bounded stage assignment
-14. Maximum 5,000 rows, six stages, 300 nodes and 25,000 contributions
-15. Hostile markup and wide ASCII/CJK preview labels
-16. 768/390/320 responsive layouts and both language controls
-17. Standalone guide HTML/PDF and screen-print partial-view notice
-18. External-request and uncaught-error checks
-19. Actual Plotly 3.1.0 consumer execution for sample, mixed-zero, all-zero, all-excluded and hostile/display-override exported figures
+## Real Plotly consumer evidence
 
-The original 18 scenarios and assertions are retained. The additional consumer scenario uses the pinned official npm package only in the test process and saves each exported figure, screenshot and `plotly-consumer-results.json`. It asserts positive node/link geometry for positive cases, no fabricated positive bands for zero/empty cases, raw metadata retention, escaped text and no external requests. `Plotly.validate` results are recorded separately from visible geometry, including zero/empty observations. This scenario is authored and has not been executed locally.
+The pinned official `plotly.js-dist-min@3.1.0` package consumed serialized figure JSON in isolated sandboxed Chromium pages, without a CDN or account. The sample case consumed the actual UI download. The remaining cases used the same serialized exporter boundary. Every fixture passed `Plotly.validate` with no reported issues, preserved raw values/customdata/metadata and produced finite geometry.
 
-The suite saves actual downloads, screenshots, a print PDF and machine-readable results when run. Those artifacts do not exist at this stage. Local browser execution is not claimed. No sandbox bypass has been added.
+| Synthetic fixture | Visible nodes | Visible link bands | Observation |
+| --- | ---: | ---: | --- |
+| Workshop sample | 7 | 7 | All positive flows rendered |
+| One positive and one zero record | 2 | 1 | The zero-only nodes/link were not visible |
+| All zero weights | 0 | 0 | Schema accepted; evidence retained without visible bands |
+| All rows excluded | 0 | 0 | Schema accepted; empty visible graph |
+| Hostile text and display overrides | 3 | 2 | Markup, quotes, apostrophes and entity-looking source text stayed literal |
 
-## Not verified
+All five consumer screenshots were inspected. The first hosted run revealed that HTML attribute escaping produced visible `&quot;` strings in Plotly labels. A dedicated Plotly text escaper repaired this without weakening the original assertion; regression checks now cover literal quotes, apostrophes, markup, pre-existing entities and quoted titles.
 
-- Flourish account import, template settings or display-label customization
-- Plotly consumer rendering, including zero-flow/empty cases
-- Screenshot/pixel layout, physical mobile devices or printed output
-- Assistive technology / screen-reader behavior or WCAG conformance
-- User demand, real customer workflows or causal/statistical interpretation
+This is evidence for these fixtures on **Plotly 3.1.0**, not a claim about every Plotly version, embedding system or maximum-sized chart. Zero-weight evidence can be present in a file while producing no visible flow.
 
-The public export language is “documented-schema handoff,” not verified consumer compatibility.
+## Evidence files
 
-## Reproduce and extend
+- [Application results](evidence/results.json)
+- [Independent download checks](evidence/download-verification.json)
+- [Plotly consumer results](evidence/plotly-consumer-results.json)
+- [CI and visual summary](evidence/ci-summary.json)
+- [Actual downloads, screenshots and PDF](evidence/)
 
-Run `npm run check` from the project root with Node 22+ and Python 3. For a supported sandboxed browser environment, build and serve on loopback, then run `npm run test:browser` after installing the pinned development dependency and Chromium. Report a failure with the exact commit, results.json and artifact; do not relabel authored checks as passes.
+The source commit above identifies the code used to capture committed evidence. Subsequent documentation/evidence commits receive their own exact-head CI checks.
 
-## First hosted consumer finding
+## Remaining limits
 
-Hosted run [37182143378](https://github.com/Masanori-Spec/path-spool/actions/runs/37182143378) passed all four model jobs and all 18 application scenarios on commit `753fe4dd5edeefce01d9f302c6ebe11243d2ef59`. The consumer scenario exposed a presentation mismatch: the shared HTML escaper turned literal quotes into entities that Plotly displayed literally.
+Flourish account import, template behavior and display-label customization remain unverified. Its export is a documented-schema handoff. No chart account was accessed and no chart was published.
 
-The exporter now uses a dedicated Plotly text escaper for ampersands and angle brackets while preserving literal quotes. Original metadata remains unchanged, markup stays escaped, and the original consumer assertion remains intact. An exporter regression also covers apostrophes and pre-existing entity text; the consumer fixture adds checks for both and for quoted titles. This repaired source still requires a new hosted run.
+Physical mobile devices, physical print output, assistive technology, screen-reader behavior, WCAG conformance, customer demand and real workflow outcomes were not tested. Adjacent aggregates do not establish full-path correlation or causal/statistical meaning. Retain the original project, paths and contributions.
+
+The workflow has read-only repository permissions and keeps Chromium's sandbox enabled. Ubuntu 22.04 is a compatibility baseline whose announced retirement is 2027-04-17. Development packages do not enter the runtime build; relevant third-party notices are retained separately from the unselected project license.

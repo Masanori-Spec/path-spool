@@ -1,0 +1,252 @@
+{
+  "sourceCommit": "e2059584c53ec28006211fc27ed7666318d9789e",
+  "runId": 37182530119,
+  "runURL": "https://github.com/Masanori-Spec/path-spool/actions/runs/37182530119",
+  "status": "success",
+  "model": {
+    "testsPerJob": 141,
+    "node": [
+      22,
+      24
+    ],
+    "timezone": [
+      "UTC",
+      "Asia/Tokyo"
+    ],
+    "jobsPassed": 4
+  },
+  "browser": {
+    "scenariosPassed": 19,
+    "chromiumSandbox": true,
+    "uncaughtErrors": [],
+    "viewportsInspected": [
+      1440,
+      768,
+      390,
+      320
+    ],
+    "languages": [
+      "en",
+      "ja"
+    ]
+  },
+  "print": {
+    "guidePages": 2,
+    "clippingOrOverlapFound": false,
+    "physicalPrintTested": false
+  },
+  "consumer": {
+    "name": "Plotly",
+    "version": "3.1.0",
+    "fixturesPassed": 5,
+    "allSchemaChecksPassed": true,
+    "FlourishImportVerified": false
+  },
+  "artifactFiles": [
+    {
+      "name": "consumer-all-excluded-figure.json",
+      "sha256": "80709d57280d0726d1f49bb484a0445bcb2f7a03f07aa8178c51e730db2bc149",
+      "bytes": 756
+    },
+    {
+      "name": "consumer-all-excluded.png",
+      "sha256": "a2de4d2ddee19e212f06bd5b494f9801b2d63bf16f1a9e3a3fc23a38d75021ff",
+      "bytes": 18884
+    },
+    {
+      "name": "consumer-all-zero-figure.json",
+      "sha256": "77ac519e431f0df69a96dbd699bd936812c020bb49b6486ed8873adf8f90c4bb",
+      "bytes": 1898
+    },
+    {
+      "name": "consumer-all-zero.png",
+      "sha256": "adb22ff60363c0733507e55b40dd8d15267724202cda7a97ab714fc5a65a1203",
+      "bytes": 19341
+    },
+    {
+      "name": "consumer-hostile-display-figure.json",
+      "sha256": "59ec5fe63b42ba56c178c8b9b2b39f3fa000a135b2c65e5759a4b42f7b7674f1",
+      "bytes": 1945
+    },
+    {
+      "name": "consumer-hostile-display.png",
+      "sha256": "a033656979f01c87ddad3b97b32b8d01d1d93a2e07fc5a9ab7444dbc8f9933fa",
+      "bytes": 31348
+    },
+    {
+      "name": "consumer-mixed-zero-figure.json",
+      "sha256": "b6caac93ea8f61b24d50341fed20a58f66fd561e6d6667f14cdfc96572ff13f1",
+      "bytes": 1903
+    },
+    {
+      "name": "consumer-mixed-zero.png",
+      "sha256": "e7df84f926b8413e5cd475fa30ec5b6bbcd5bb183538130f0e456e42f5c249d0",
+      "bytes": 22334
+    },
+    {
+      "name": "consumer-sample-figure.json",
+      "sha256": "0c61101f31c8c443a0a4d261bdb33d22bb06d2b419eab2348ccf98e8d4c1d5ce",
+      "bytes": 3440
+    },
+    {
+      "name": "consumer-sample.png",
+      "sha256": "4cdb18ab37eef13f3c1fd1661ae3bdd1ee7014086cbd05a65af1f0bb480e25f2",
+      "bytes": 36866
+    },
+    {
+      "name": "contributions-machine.csv",
+      "sha256": "0a503268b4078142d3ff4d60d8bbfc113d1d02e8b793c8ea33b536306290f8e3",
+      "bytes": 180
+    },
+    {
+      "name": "contributions.json",
+      "sha256": "16db05aed4b12abbaffd6a6a4e88e22cc14e2e74920f60768b6b8a485872174e",
+      "bytes": 830
+    },
+    {
+      "name": "desktop-en.png",
+      "sha256": "5b5ca4c1faf0d8674d527ddf6a3d76fcdc24acc59e0e6a02bc7006b2a20f16f7",
+      "bytes": 298952
+    },
+    {
+      "name": "desktop-ja.png",
+      "sha256": "d41a38431deeb3307a50420ec066637339db28ebadc665d49e5f4ef28fc0bc72",
+      "bytes": 337662
+    },
+    {
+      "name": "display-project.json",
+      "sha256": "a4109590bb80a4543dc143eeb6854fb06aa7ef102547971ebbe20801b374c48e",
+      "bytes": 887
+    },
+    {
+      "name": "download-verification.json",
+      "sha256": "44169c39b7323bed3c4cc5ff42395cdee1b32ab32dd991393df245de3e5ad219",
+      "bytes": 364
+    },
+    {
+      "name": "excluded-policy.json",
+      "sha256": "b20bf8fcdf03d5a0a08a0cda77d5ee629c3eba113c0435d1ba0acc46bf7fed7b",
+      "bytes": 201
+    },
+    {
+      "name": "exclusions.json",
+      "sha256": "3206bc7dd7f44e408548f5ad7018ded5f3f5fb6f616c72be101fda4cd519a981",
+      "bytes": 86
+    },
+    {
+      "name": "flourish-machine.csv",
+      "sha256": "f951ade5fac37fe3cadff991a23888d25734ab1173993d4d0a6315adf83ac0cc",
+      "bytes": 510
+    },
+    {
+      "name": "handoff-guide.html",
+      "sha256": "843bccc074d7096178ab4cc84c9acc36abd376748020c462efe81e4aa8b8de5a",
+      "bytes": 5041
+    },
+    {
+      "name": "handoff-guide.pdf",
+      "sha256": "a34ffcfdc857463f52fe2689be689d33cb3d479dc3444ea6aca23d68a3862345",
+      "bytes": 38547
+    },
+    {
+      "name": "handoff-guide.png",
+      "sha256": "e5a568af66f8a7f97470ecd9d4e16443d93a3e1c1ae49298083e0dce9a17bb73",
+      "bytes": 182733
+    },
+    {
+      "name": "identity-machine.csv",
+      "sha256": "b264d1065fa91bc2034c899a82517ff51126794455e28bf8cfaaede0050e2f7a",
+      "bytes": 196
+    },
+    {
+      "name": "identity-project.json",
+      "sha256": "ad366a4601360c50162eef4e0c08df98ee14163f9bdf106b41966ca695f8d357",
+      "bytes": 689
+    },
+    {
+      "name": "identity-spreadsheet.csv",
+      "sha256": "a3cfe1acad534cdf748140b7926990dd70989ce3fd5f1f7ffe90017519bcc3ad",
+      "bytes": 198
+    },
+    {
+      "name": "maximum-contributions.json",
+      "sha256": "6b10f719753c77c0f4a00ce2169560645f76b22b19b8a43dc66c182b45e2755f",
+      "bytes": 2453224
+    },
+    {
+      "name": "maximum-project.json",
+      "sha256": "f9c88f6bdb4af6f82d100b57898cde77ac634bc79e338d6474bdc1ce0de8057d",
+      "bytes": 673280
+    },
+    {
+      "name": "maximum.png",
+      "sha256": "25b3e4e6ea9adb1bf354d20c61cb2d469a985a83d7b9953ca536fec81f2fd41a",
+      "bytes": 376835
+    },
+    {
+      "name": "mobile-en-320.png",
+      "sha256": "4d41a490bf62b285928887bacd4a83d638fbe0eac37dc03b5c7ed0848415f71e",
+      "bytes": 255340
+    },
+    {
+      "name": "mobile-en-390.png",
+      "sha256": "3712b91fff62318591fc2b94cb0cb9d0e4b7ba8e93d2841055ac6062ef4e1c28",
+      "bytes": 259846
+    },
+    {
+      "name": "mobile-en-768.png",
+      "sha256": "3fb1a5826ea223748ffe16f8abaf0194c265c873c07ff9610369fecb9e4486fc",
+      "bytes": 277127
+    },
+    {
+      "name": "mobile-ja-320.png",
+      "sha256": "5517bd37b9e2dc0a542bf2e118702365bdb232c58c3471a977589b5d66c18c20",
+      "bytes": 289685
+    },
+    {
+      "name": "mobile-ja-390.png",
+      "sha256": "d6d9004151fae2ea28df9b2de502ccc1fffd33ff928123a0cb9785bbac2820e9",
+      "bytes": 295080
+    },
+    {
+      "name": "mobile-ja-768.png",
+      "sha256": "4fa1697424a208ab0e838bda74ebb8c4bb86f1a889c2ad125e64c10b7a03f217",
+      "bytes": 311489
+    },
+    {
+      "name": "nodes-machine.csv",
+      "sha256": "ea6f5c04b89252f7fe08854daf4177af827c2ab7cad4678f42fab2a43d6f0620",
+      "bytes": 302
+    },
+    {
+      "name": "paths.json",
+      "sha256": "6a4b3ca01fa5bb0b4db2248f5486e95fc15687a5e2984ab145ccf2ebe7fbd327",
+      "bytes": 1774
+    },
+    {
+      "name": "pathspool-project.json",
+      "sha256": "1554df1f0cfdee4e495b0c130617014e1a477712921cf93413980d41fb6fd559",
+      "bytes": 768
+    },
+    {
+      "name": "plotly-consumer-results.json",
+      "sha256": "9dec987fe01e89b52c1e0d09cb587fe113a3018aa4102847ea176e65c6d0abb3",
+      "bytes": 13591
+    },
+    {
+      "name": "plotly-figure.json",
+      "sha256": "0c61101f31c8c443a0a4d261bdb33d22bb06d2b419eab2348ccf98e8d4c1d5ce",
+      "bytes": 3440
+    },
+    {
+      "name": "results.json",
+      "sha256": "f8ff64c11886db11b4659b3606112ae65039114b2a45cc08342ca2cb11cb6bed",
+      "bytes": 1688
+    },
+    {
+      "name": "wide-labels.png",
+      "sha256": "b898139737344092a503df806cea5570284695ed3c242b1db16f075aac1b2220",
+      "bytes": 307281
+    }
+  ]
+}

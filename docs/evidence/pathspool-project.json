@@ -1,0 +1,53 @@
+{
+  "schema": "pathspool.project.v1",
+  "title": "Workshop journeys",
+  "table": {
+    "columns": [
+      "Participant",
+      "Discovery",
+      "Session",
+      "Next step",
+      "Weight"
+    ],
+    "rows": [
+      [
+        "p01",
+        "Newsletter",
+        "Design lab",
+        "Prototype",
+        "3"
+      ],
+      [
+        "p02",
+        "Friend",
+        "Design lab",
+        "Prototype",
+        "2"
+      ],
+      [
+        "p03",
+        "Newsletter",
+        "Research lab",
+        "Share notes",
+        "1"
+      ],
+      [
+        "p04",
+        "Friend",
+        "",
+        "Prototype",
+        "4"
+      ]
+    ]
+  },
+  "mapping": {
+    "stages": [
+      1,
+      2,
+      3
+    ],
+    "id": 0,
+    "weight": 4
+  },
+  "missing": "sentinel"
+}

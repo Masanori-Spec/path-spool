@@ -1,0 +1,53 @@
+{
+  "schema": "pathspool.project.v1",
+  "title": "Labels stay distinct",
+  "table": {
+    "columns": [
+      "ID",
+      "Before",
+      "Middle",
+      "After",
+      "Weight"
+    ],
+    "rows": [
+      [
+        "same",
+        "A",
+        "A",
+        "A",
+        "1"
+      ],
+      [
+        "same",
+        " A",
+        "(missing)",
+        "A",
+        "2"
+      ],
+      [
+        "=SUM(1,2)",
+        "A",
+        "",
+        "<done>",
+        "3"
+      ],
+      [
+        "0",
+        "A|B",
+        "B|C",
+        " C ",
+        "0"
+      ]
+    ]
+  },
+  "mapping": {
+    "stages": [
+      1,
+      2,
+      3
+    ],
+    "id": 0,
+    "weight": 4
+  },
+  "missing": "sentinel"
+}

@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "type": "sankey",
+      "orientation": "h",
+      "valueformat": ".0f",
+      "node": {
+        "pad": 18,
+        "thickness": 16,
+        "label": [],
+        "customdata": []
+      },
+      "link": {
+        "source": [],
+        "target": [],
+        "value": [],
+        "customdata": []
+      }
+    }
+  ],
+  "layout": {
+    "title": {
+      "text": "All rows excluded"
+    },
+    "font": {
+      "family": "Arial, sans-serif",
+      "size": 12
+    },
+    "meta": {
+      "generator": "PathSpool 0.1.0",
+      "policy": "exclude",
+      "stageNames": [
+        "Before",
+        "After"
+      ],
+      "limitation": "Adjacent links do not encode full-path correlation. Retain normalized paths and contributions."
+    }
+  }
+}

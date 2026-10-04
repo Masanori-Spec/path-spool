@@ -1,0 +1,509 @@
+{
+  "status": "passed",
+  "version": "3.1.0",
+  "fixtureCount": 5,
+  "scope": "Synthetic exported figures rendered by pinned official Plotly npm bundle. No Flourish account or import. Schema acceptance is recorded separately from visible zero/empty behavior.",
+  "fixtures": [
+    {
+      "name": "sample",
+      "version": "3.1.0",
+      "inputRows": 4,
+      "retainedRows": 4,
+      "retainedWeight": 10,
+      "excludedWeight": 0,
+      "exportedNodes": 7,
+      "exportedLinks": 7,
+      "positiveLinks": 7,
+      "schemaAccepted": true,
+      "validation": [],
+      "visibleNodeRectangles": 7,
+      "visibleLinkBands": 7,
+      "observation": "Positive flows must render; zero-only links may be omitted.",
+      "observed": {
+        "version": "3.1.0",
+        "validation": [],
+        "nodeGeometry": [
+          {
+            "width": 16,
+            "height": 169.60000610351562,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 16,
+            "height": 254.39999389648438,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 16,
+            "height": 211.99996948242188,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 16,
+            "height": 42.4000244140625,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 16,
+            "height": 169.60000610351562,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 16,
+            "height": 381.5999755859375,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 16,
+            "height": 42.4000244140625,
+            "visible": true,
+            "invalidGeometry": false
+          }
+        ],
+        "linkGeometry": [
+          {
+            "width": 396,
+            "height": 145.19998168945312,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 396,
+            "height": 42.4000244140625,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 396,
+            "height": 84.79998779296875,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 396,
+            "height": 187.60000610351562,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 396,
+            "height": 211.99996948242188,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 396,
+            "height": 42.4000244140625,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 396,
+            "height": 187.60000610351562,
+            "visible": true,
+            "invalidGeometry": false
+          }
+        ],
+        "text": "s1n1 · Newsletters1n2 · Friends2n1 · Design labs2n2 · Research labs2n3 · ∅ missings3n1 · Prototypes3n2 · Share notesWorkshop journeys",
+        "labels": [
+          "s1n1 · Newsletter",
+          "s1n2 · Friend",
+          "s2n1 · Design lab",
+          "s2n2 · Research lab",
+          "s2n3 · ∅ missing",
+          "s3n1 · Prototype",
+          "s3n2 · Share notes"
+        ],
+        "injected": null,
+        "executableSourceElements": 0,
+        "storedValues": [
+          3,
+          1,
+          2,
+          4,
+          5,
+          1,
+          4
+        ],
+        "storedRawLabels": [
+          {
+            "id": "s1n1",
+            "stage": 1,
+            "label": "Newsletter",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s1n2",
+            "stage": 1,
+            "label": "Friend",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n1",
+            "stage": 2,
+            "label": "Design lab",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n2",
+            "stage": 2,
+            "label": "Research lab",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n3",
+            "stage": 2,
+            "label": null,
+            "displayLabel": null,
+            "missing": true
+          },
+          {
+            "id": "s3n1",
+            "stage": 3,
+            "label": "Prototype",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s3n2",
+            "stage": 3,
+            "label": "Share notes",
+            "displayLabel": null,
+            "missing": false
+          }
+        ],
+        "storedMeta": {
+          "generator": "PathSpool 0.1.0",
+          "policy": "sentinel",
+          "stageNames": [
+            "Discovery",
+            "Session",
+            "Next step"
+          ],
+          "limitation": "Adjacent links do not encode full-path correlation. Retain normalized paths and contributions."
+        }
+      },
+      "uncaught": [],
+      "consoleErrors": [],
+      "requests": []
+    },
+    {
+      "name": "mixed-zero",
+      "version": "3.1.0",
+      "inputRows": 2,
+      "retainedRows": 2,
+      "retainedWeight": 3,
+      "excludedWeight": 0,
+      "exportedNodes": 4,
+      "exportedLinks": 2,
+      "positiveLinks": 1,
+      "schemaAccepted": true,
+      "validation": [],
+      "visibleNodeRectangles": 2,
+      "visibleLinkBands": 1,
+      "observation": "Positive flows must render; zero-only links may be omitted.",
+      "observed": {
+        "version": "3.1.0",
+        "validation": [],
+        "nodeGeometry": [
+          {
+            "width": 16,
+            "height": 460,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 16,
+            "height": 460,
+            "visible": true,
+            "invalidGeometry": false
+          }
+        ],
+        "linkGeometry": [
+          {
+            "width": 808,
+            "height": 460,
+            "visible": true,
+            "invalidGeometry": false
+          }
+        ],
+        "text": "s1n1 · As2n1 · BOne visible link, one zero record",
+        "labels": [
+          "s1n1 · A",
+          "s2n1 · B"
+        ],
+        "injected": null,
+        "executableSourceElements": 0,
+        "storedValues": [
+          3,
+          0
+        ],
+        "storedRawLabels": [
+          {
+            "id": "s1n1",
+            "stage": 1,
+            "label": "A",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s1n2",
+            "stage": 1,
+            "label": "C",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n1",
+            "stage": 2,
+            "label": "B",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n2",
+            "stage": 2,
+            "label": "D",
+            "displayLabel": null,
+            "missing": false
+          }
+        ],
+        "storedMeta": {
+          "generator": "PathSpool 0.1.0",
+          "policy": "sentinel",
+          "stageNames": [
+            "Before",
+            "After"
+          ],
+          "limitation": "Adjacent links do not encode full-path correlation. Retain normalized paths and contributions."
+        }
+      },
+      "uncaught": [],
+      "consoleErrors": [],
+      "requests": []
+    },
+    {
+      "name": "all-zero",
+      "version": "3.1.0",
+      "inputRows": 2,
+      "retainedRows": 2,
+      "retainedWeight": 0,
+      "excludedWeight": 0,
+      "exportedNodes": 4,
+      "exportedLinks": 2,
+      "positiveLinks": 0,
+      "schemaAccepted": true,
+      "validation": [],
+      "visibleNodeRectangles": 0,
+      "visibleLinkBands": 0,
+      "observation": "Zero/empty evidence is not a visible flow; record actual consumer behavior.",
+      "observed": {
+        "version": "3.1.0",
+        "validation": [],
+        "nodeGeometry": [],
+        "linkGeometry": [],
+        "text": "Zero weights remain evidence",
+        "labels": [],
+        "injected": null,
+        "executableSourceElements": 0,
+        "storedValues": [
+          0,
+          0
+        ],
+        "storedRawLabels": [
+          {
+            "id": "s1n1",
+            "stage": 1,
+            "label": "A",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s1n2",
+            "stage": 1,
+            "label": "C",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n1",
+            "stage": 2,
+            "label": "B",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n2",
+            "stage": 2,
+            "label": "D",
+            "displayLabel": null,
+            "missing": false
+          }
+        ],
+        "storedMeta": {
+          "generator": "PathSpool 0.1.0",
+          "policy": "sentinel",
+          "stageNames": [
+            "Before",
+            "After"
+          ],
+          "limitation": "Adjacent links do not encode full-path correlation. Retain normalized paths and contributions."
+        }
+      },
+      "uncaught": [],
+      "consoleErrors": [],
+      "requests": []
+    },
+    {
+      "name": "all-excluded",
+      "version": "3.1.0",
+      "inputRows": 2,
+      "retainedRows": 0,
+      "retainedWeight": 0,
+      "excludedWeight": 6,
+      "exportedNodes": 0,
+      "exportedLinks": 0,
+      "positiveLinks": 0,
+      "schemaAccepted": true,
+      "validation": [],
+      "visibleNodeRectangles": 0,
+      "visibleLinkBands": 0,
+      "observation": "Zero/empty evidence is not a visible flow; record actual consumer behavior.",
+      "observed": {
+        "version": "3.1.0",
+        "validation": [],
+        "nodeGeometry": [],
+        "linkGeometry": [],
+        "text": "All rows excluded",
+        "labels": [],
+        "injected": null,
+        "executableSourceElements": 0,
+        "storedValues": [],
+        "storedRawLabels": [],
+        "storedMeta": {
+          "generator": "PathSpool 0.1.0",
+          "policy": "exclude",
+          "stageNames": [
+            "Before",
+            "After"
+          ],
+          "limitation": "Adjacent links do not encode full-path correlation. Retain normalized paths and contributions."
+        }
+      },
+      "uncaught": [],
+      "consoleErrors": [],
+      "requests": []
+    },
+    {
+      "name": "hostile-display",
+      "version": "3.1.0",
+      "inputRows": 2,
+      "retainedRows": 2,
+      "retainedWeight": 3,
+      "excludedWeight": 0,
+      "exportedNodes": 3,
+      "exportedLinks": 2,
+      "positiveLinks": 2,
+      "schemaAccepted": true,
+      "validation": [],
+      "visibleNodeRectangles": 3,
+      "visibleLinkBands": 2,
+      "observation": "Positive flows must render; zero-only links may be omitted.",
+      "observed": {
+        "version": "3.1.0",
+        "validation": [],
+        "nodeGeometry": [
+          {
+            "width": 16,
+            "height": 294.6666564941406,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 16,
+            "height": 147.33331298828125,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 16,
+            "height": 442,
+            "visible": true,
+            "invalidGeometry": false
+          }
+        ],
+        "linkGeometry": [
+          {
+            "width": 808,
+            "height": 300.6666564941406,
+            "visible": true,
+            "invalidGeometry": false
+          },
+          {
+            "width": 808,
+            "height": 159.33334350585938,
+            "visible": true,
+            "invalidGeometry": false
+          }
+        ],
+        "text": "s1n1 · <b>Alias</b> & \"text\"s1n2 · 'single' &quot; &#39;s2n1 · <i>End</i>Literal <b>title</b> & text \"quoted\" 'single'",
+        "labels": [
+          "s1n1 · <b>Alias</b> & \"text\"",
+          "s1n2 · 'single' &quot; &#39;",
+          "s2n1 · <i>End</i>"
+        ],
+        "injected": null,
+        "executableSourceElements": 0,
+        "storedValues": [
+          2,
+          1
+        ],
+        "storedRawLabels": [
+          {
+            "id": "s1n1",
+            "stage": 1,
+            "label": "<img src=x onerror=\"window.__plotlyInjected=1\">",
+            "displayLabel": "<b>Alias</b> & \"text\"",
+            "missing": false
+          },
+          {
+            "id": "s1n2",
+            "stage": 1,
+            "label": "ordinary",
+            "displayLabel": "'single' &quot; &#39;",
+            "missing": false
+          },
+          {
+            "id": "s2n1",
+            "stage": 2,
+            "label": "<i>end</i>",
+            "displayLabel": "<i>End</i>",
+            "missing": false
+          }
+        ],
+        "storedMeta": {
+          "generator": "PathSpool 0.1.0",
+          "policy": "sentinel",
+          "stageNames": [
+            "Before",
+            "After"
+          ],
+          "limitation": "Adjacent links do not encode full-path correlation. Retain normalized paths and contributions."
+        }
+      },
+      "uncaught": [],
+      "consoleErrors": [],
+      "requests": []
+    }
+  ]
+}

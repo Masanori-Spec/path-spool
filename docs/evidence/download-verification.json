@@ -1,0 +1,16 @@
+{
+  "sampleRows": 4,
+  "nodes": 7,
+  "links": 7,
+  "exactBoundaryWeights": [
+    10,
+    10
+  ],
+  "sourcePathsAndContributionsPreserved": true,
+  "CSVPlotlyIndicesAndMetadataMatch": true,
+  "standaloneGuideHasNoActiveOrExternalAssets": true,
+  "maximumRows": 5000,
+  "maximumContributions": 25000,
+  "eachMaximumRowContributesFiveTimes": true,
+  "passed": true
+}

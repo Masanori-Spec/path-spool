@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "chromiumSandbox": true,
+  "checks": [
+    "initial sample has exact policy totals, unique IDs and seven traceable links",
+    "keyboard link selection and Japanese interface retain exact contributing row",
+    "policy draft locks exports; exclusion changes every boundary to six",
+    "invalid roles retain last compiled work and revert clears draft",
+    "display overrides change presentation while preserving node IDs and raw path evidence",
+    "malformed CSV survives language change; TSV reads quoted line breaks and literal formulas",
+    "example replacement cancellation and confirmation preserve deliberate choices",
+    "all nine handoff downloads equal deterministic exports and project reimports",
+    "machine versus spreadsheet CSV is explicit and JSON evidence remains exact",
+    "repeated file reads and malformed UTF-8 distinguish a legitimate replacement character",
+    "late asynchronous file reads cannot replace a newer sample",
+    "link filtering and provenance pagination retain exact row evidence",
+    "high-cardinality ID columns can be staged before assigning bounded stage roles",
+    "maximum 5000 rows, six stages and 300 nodes export all 25000 contributions",
+    "wide labels and hostile markup remain escaped and contained in the preview",
+    "responsive 768, 390 and 320 layouts preserve language controls and functional mapping",
+    "handoff guide is standalone, escaped and printable; screen print warns about partial views",
+    "no external application requests or uncaught page errors",
+    "actual pinned Plotly consumer renders synthetic exports with explicit zero/empty observations"
+  ],
+  "uncaughtErrors": []
+}

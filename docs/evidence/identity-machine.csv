@@ -1,0 +1,9 @@
+Link ID,Row,Item ID,Item ID present,Weight
+l1,1,same,true,1
+l2,3,"=SUM(1,2)",true,3
+l3,2,same,true,2
+l4,4,0,true,0
+l5,1,same,true,1
+l6,2,same,true,2
+l7,3,"=SUM(1,2)",true,3
+l8,4,0,true,0

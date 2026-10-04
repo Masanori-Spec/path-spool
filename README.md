@@ -6,6 +6,12 @@ PathSpool is a small local web app for people preparing a table for a flow-chart
 
 The included workshop example makes the policy consequence visible: keeping a distinct missing node retains weight **10** at both boundaries; excluding incomplete rows retains **6** and records the removed weight **4**.
 
+## Verified preview
+
+![PathSpool desktop interface](docs/evidence/desktop-en.png)
+
+[Hosted verification](https://github.com/Masanori-Spec/path-spool/actions/runs/37182530119) passed for `e2059584c53ec28006211fc27ed7666318d9789e`: 141 tests in each of four Node/timezone combinations, all 19 browser scenarios, and five bounded Plotly consumer fixtures. [Screenshots, actual exports and limits](docs/verification.md).
+
 ## What it does
 
 - CSV / TSV / versioned project JSON input, processed in the browser
@@ -36,7 +42,7 @@ npm run check       # syntax/network guard, all model/state/export tests, build
 npm run package     # reproducible source/static ZIPs and SHA-256 manifest
 ```
 
-Browser development checks use the pinned official `plotly.js-dist-min@3.1.0` package only for synthetic consumer tests, alongside Playwright. Neither package enters the runtime build. Checks use `npm ci --ignore-scripts`, `npx playwright install --with-deps chromium`, then `npm run test:browser` with the local server running. Chromium launches with its sandbox enabled. The authored GitHub Actions workflow tests Node 22/24 in UTC/Tokyo and performs browser checks on Ubuntu 22.04. Do not weaken the sandbox to run in a restricted environment.
+Browser development checks use the pinned official `plotly.js-dist-min@3.1.0` package only for synthetic consumer tests, alongside Playwright. Neither package enters the runtime build. Checks use `npm ci --ignore-scripts`, `npx playwright install --with-deps chromium`, then `npm run test:browser` with the local server running. Chromium launches with its sandbox enabled. The GitHub Actions workflow tests Node 22/24 in UTC/Tokyo and performs browser checks on Ubuntu 22.04. Do not weaken the sandbox to run in a restricted environment.
 
 ## Workflow
 
@@ -69,9 +75,9 @@ Spreadsheet-safe mode changes the three CSV filenames to `*-spreadsheet.csv` and
 
 Flourish's documented alluvial format binds Source, Target, Value, Step from and Step to. PathSpool exports generated alphanumeric IDs because the documented template can normalize labels. Bind the ID columns; raw label columns are lookups, not identity bindings. The initial chart displays IDs. Any display-label customization needs a separate check.
 
-Plotly source/target arrays index `node.label`. Labels are ID-prefixed and HTML-escaped for display; `node.customdata` retains raw labels and the typed missing flag. Metadata is in `layout.meta`.
+Plotly source/target arrays index `node.label`. Labels are ID-prefixed and escaped for Plotly text display; `node.customdata` retains raw labels and the typed missing flag. Metadata is in `layout.meta`.
 
-These are documented-schema handoffs. **No live Flourish import or Plotly rendering has been verified in this version.** Empty retained sets and zero-valued links remain valid evidence, but chart tools can display them differently or not visibly. The app's own preview is a schematic adjacency view, not a complete alluvial layout engine.
+**Flourish remains a documented-schema handoff; no live account import has been tested.** Five synthetic exported figures were rendered and inspected with the official Plotly.js **3.1.0** package. The sample and hostile/display-override cases rendered their positive links; mixed-zero input rendered only its positive link; all-zero and all-excluded input produced no visible bands. All five passed schema checks and retained raw metadata. This is bounded version/fixture evidence, not a general compatibility guarantee. Empty retained sets and zero-valued links remain valid evidence even when not visible. The app's own preview is a schematic adjacency view, not a complete alluvial layout engine.
 
 An adjacent-link graph cannot preserve all full-path correlations. Two different sets of complete paths can have identical adjacent totals. Keep `paths.json` and the contribution evidence alongside a chart. No causal, statistical, legal or accessibility certification is implied.
 
@@ -99,7 +105,7 @@ Errors retain the current source draft and last successful result. A delayed fil
 
 Local aggregate checks pass: **141 tests**. The [independent review](docs/INDEPENDENT_REVIEW.md) records the final findings and repairs. An independent Python tuple oracle validates 2,193 compiled cases, including 1,692 exhaustive small cases and 480 seeded cases; it also rejects 17 deliberately corrupted outputs. See [verification](docs/verification.md) for exact coverage and limits.
 
-The 19 sandboxed browser scenarios are authored but have **not yet run** in the current local verification stage. Screenshots, PDF layout, actual consumer import/rendering and screen-reader behavior are not claimed as verified. The added Plotly scenario will render five synthetic exported figures and record schema acceptance separately from visible zero/empty behavior.
+**19 / 19 sandboxed Chromium scenarios passed** in hosted CI, including actual downloads and five Plotly 3.1.0 consumer fixtures. English/Japanese desktop/mobile layouts, wide and maximum previews, and the two-page guide PDF were inspected. Flourish import, physical devices/printing and screen-reader behavior remain unverified. See the [evidence record](docs/verification.md) for exact scope.
 
 ## 日本語
 

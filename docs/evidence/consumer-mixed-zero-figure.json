@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "type": "sankey",
+      "orientation": "h",
+      "valueformat": ".0f",
+      "node": {
+        "pad": 18,
+        "thickness": 16,
+        "label": [
+          "s1n1 · A",
+          "s1n2 · C",
+          "s2n1 · B",
+          "s2n2 · D"
+        ],
+        "customdata": [
+          {
+            "id": "s1n1",
+            "stage": 1,
+            "label": "A",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s1n2",
+            "stage": 1,
+            "label": "C",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n1",
+            "stage": 2,
+            "label": "B",
+            "displayLabel": null,
+            "missing": false
+          },
+          {
+            "id": "s2n2",
+            "stage": 2,
+            "label": "D",
+            "displayLabel": null,
+            "missing": false
+          }
+        ]
+      },
+      "link": {
+        "source": [
+          0,
+          1
+        ],
+        "target": [
+          2,
+          3
+        ],
+        "value": [
+          3,
+          0
+        ],
+        "customdata": [
+          {
+            "id": "l1",
+            "boundary": 1,
+            "rows": [
+              1
+            ]
+          },
+          {
+            "id": "l2",
+            "boundary": 1,
+            "rows": [
+              2
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "layout": {
+    "title": {
+      "text": "One visible link, one zero record"
+    },
+    "font": {
+      "family": "Arial, sans-serif",
+      "size": 12
+    },
+    "meta": {
+      "generator": "PathSpool 0.1.0",
+      "policy": "sentinel",
+      "stageNames": [
+        "Before",
+        "After"
+      ],
+      "limitation": "Adjacent links do not encode full-path correlation. Retain normalized paths and contributions."
+    }
+  }
+}

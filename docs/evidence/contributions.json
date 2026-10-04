@@ -1,0 +1,54 @@
+{
+  "schema": "pathspool.contributions.v1",
+  "policy": "sentinel",
+  "contributions": [
+    {
+      "linkId": "l1",
+      "row": 1,
+      "itemId": "p01",
+      "weight": 3
+    },
+    {
+      "linkId": "l2",
+      "row": 3,
+      "itemId": "p03",
+      "weight": 1
+    },
+    {
+      "linkId": "l3",
+      "row": 2,
+      "itemId": "p02",
+      "weight": 2
+    },
+    {
+      "linkId": "l4",
+      "row": 4,
+      "itemId": "p04",
+      "weight": 4
+    },
+    {
+      "linkId": "l5",
+      "row": 1,
+      "itemId": "p01",
+      "weight": 3
+    },
+    {
+      "linkId": "l5",
+      "row": 2,
+      "itemId": "p02",
+      "weight": 2
+    },
+    {
+      "linkId": "l6",
+      "row": 3,
+      "itemId": "p03",
+      "weight": 1
+    },
+    {
+      "linkId": "l7",
+      "row": 4,
+      "itemId": "p04",
+      "weight": 4
+    }
+  ]
+}
