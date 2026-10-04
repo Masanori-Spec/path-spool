@@ -1,0 +1,23 @@
+{
+  "name": "path-spool",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local staged-table to Sankey handoff with exact weights and row provenance",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:oracle": "node --test tests/oracle.test.mjs",
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs && npm test && npm run build",
+    "test:browser": "node tests/browser/browser-test.mjs",
+    "package": "node scripts/package.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.0",
+    "plotly.js-dist-min": "3.1.0"
+  }
+}
