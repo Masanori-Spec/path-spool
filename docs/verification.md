@@ -4,7 +4,7 @@ Local build stage, 2026-10-04. This record distinguishes executed checks from au
 
 ## Executed locally
 
-`npm run check` passes syntax validation, a runtime no-network-call guard, **140 tests**, and the static build.
+`npm run check` passes syntax validation, a runtime no-network-call guard, **141 tests**, and the static build.
 
 - **11 final reviewer tests**: 64 inverse export-kit checks, five corruption rejections, four finding regressions, maximum Unicode and low-heap budgets, and actual handlers; see [independent review](INDEPENDENT_REVIEW.md)
 - **77 independent model/input tests**: Python structured tuples reconstruct nodes, links, weights, paths, exclusions and row provenance without importing production code
@@ -12,7 +12,7 @@ Local build stage, 2026-10-04. This record distinguishes executed checks from au
 - **17 mutation self-checks**: deliberately corrupt output identity, weight, row provenance, paths or exclusions; the independent oracle rejects all
 - **162 delimiter quoting combinations** plus malformed CSV/TSV, duplicate JSON keys, Unicode, controls, field and size caps
 - **12 display-label tests**: bound source identities, duplicate display names, escaped overrides, strict schema and two additional independent-oracle policy cases
-- **12 export tests**: Python CSV/HTML parsing, Flourish step/value/identity bindings, Plotly indices and layout metadata, escaping, spreadsheet-mode changes and project round trips
+- **13 export tests**: Python CSV/HTML parsing, Flourish step/value/identity bindings, Plotly indices and layout metadata, escaping, spreadsheet-mode changes and project round trips
 - **17 state tests**: atomic apply/revert, exact source regeneration, six newer-action file-read races, stale failures, repeated reads, actual Blob malformed UTF-8 and valid U+FFFD
 - **11 actual UI handler tests** using a deliberately limited DOM double: draft locks, language preservation, mapping failure, sample cancellation, filters, keyboard selection/focus and file import
 
@@ -61,3 +61,9 @@ The public export language is “documented-schema handoff,” not verified cons
 ## Reproduce and extend
 
 Run `npm run check` from the project root with Node 22+ and Python 3. For a supported sandboxed browser environment, build and serve on loopback, then run `npm run test:browser` after installing the pinned development dependency and Chromium. Report a failure with the exact commit, results.json and artifact; do not relabel authored checks as passes.
+
+## First hosted consumer finding
+
+Hosted run [37182143378](https://github.com/Masanori-Spec/path-spool/actions/runs/37182143378) passed all four model jobs and all 18 application scenarios on commit `753fe4dd5edeefce01d9f302c6ebe11243d2ef59`. The consumer scenario exposed a presentation mismatch: the shared HTML escaper turned literal quotes into entities that Plotly displayed literally.
+
+The exporter now uses a dedicated Plotly text escaper for ampersands and angle brackets while preserving literal quotes. Original metadata remains unchanged, markup stays escaped, and the original consumer assertion remains intact. An exporter regression also covers apostrophes and pre-existing entity text; the consumer fixture adds checks for both and for quoted titles. This repaired source still requires a new hosted run.

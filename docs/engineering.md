@@ -32,7 +32,7 @@ The delimited parser is a bounded character-state parser, not a split-on-newline
 
 Direct model calls also reject non-plain prototypes, accessor properties, serialization hooks, extra array properties and sparse arrays. JSON import cannot construct those objects, but the public module boundary should not silently lose data if used from another script. Validated projects are cloned on import and staged state boundaries.
 
-All user text is escaped when included in HTML or SVG. Plotly display strings are escaped because its labels can interpret markup, while customdata stores raw labels. No source text is evaluated. Runtime code contains no network calls; the document CSP also disallows network connections, objects and form submission.
+All user text is escaped when included in HTML or SVG. Plotly display strings escape ampersands and angle brackets because its labels can interpret markup, while preserving literal quotes and apostrophes. Its text decoder does not treat all HTML attribute entities like a browser does; using the shared HTML escaper caused quotes to display as entity text and was corrected after an actual consumer test. Customdata stores raw labels. No source text is evaluated. Runtime code contains no network calls; the document CSP also disallows network connections, objects and form submission.
 
 CSV is a separate trust boundary: RFC-style quoting preserves syntax but does not prevent spreadsheet formulas. Machine output preserves text. Spreadsheet-safe output prefixes risky textual cells, announces that change and receives separate filenames. It is not sold as universally safe for every spreadsheet workflow.
 

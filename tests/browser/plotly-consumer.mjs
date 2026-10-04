@@ -8,11 +8,11 @@ import {exportsFor} from '../../src/export.mjs';
 export const PLOTLY_VERSION='3.1.0';
 const simple=(title,rows,missing='sentinel')=>({schema:'pathspool.project.v1',title,table:{columns:['Before','After','Weight'],rows},mapping:{stages:[0,1],id:null,weight:2},missing});
 export function consumerFixtures(){
-  const hostile=simple('Literal <b>title</b> & text',[
+  const hostile=simple(`Literal <b>title</b> & text "quoted" 'single'`,[
     ['<img src=x onerror="window.__plotlyInjected=1">','<i>end</i>','2'],
     ['ordinary','<i>end</i>','1']
   ]);
-  hostile.displayLabels=[{stage:0,label:hostile.table.rows[0][0],display:'<b>Alias</b> & "text"'},{stage:1,label:'<i>end</i>',display:'<i>End</i>'}];
+  hostile.displayLabels=[{stage:0,label:hostile.table.rows[0][0],display:'<b>Alias</b> & "text"'},{stage:1,label:'<i>end</i>',display:'<i>End</i>'},{stage:0,label:'ordinary',display:`'single' &quot; &#39;`}];
   return [
     {name:'sample',project:structuredClone(sample)},
     {name:'mixed-zero',project:simple('One visible link, one zero record',[['A','B','3'],['C','D','0']])},
@@ -80,6 +80,8 @@ export async function verifyPlotlyConsumer(context,out){
         assert.ok(observed.labels.some(label=>label.includes('<b>Alias</b> & "text"')),JSON.stringify(observed.labels));
         assert.ok(observed.labels.some(label=>label.includes('<i>End</i>')),JSON.stringify(observed.labels));
         assert.ok(observed.text.includes('Literal <b>title</b> & text'));
+        assert.ok(observed.labels.some(label=>label.includes("'single' &quot; &#39;")),JSON.stringify(observed.labels));
+        assert.ok(observed.text.includes("Literal <b>title</b> & text \"quoted\" 'single'"));
       }
     }catch(error){
       await page.screenshot({path:`${out}/consumer-${name}-failure.png`,fullPage:true}).catch(()=>{});

@@ -97,7 +97,7 @@ Errors retain the current source draft and last successful result. A delayed fil
 
 ## Verification status
 
-Local aggregate checks pass: **140 tests**. The [independent review](docs/INDEPENDENT_REVIEW.md) records the final findings and repairs. An independent Python tuple oracle validates 2,193 compiled cases, including 1,692 exhaustive small cases and 480 seeded cases; it also rejects 17 deliberately corrupted outputs. See [verification](docs/verification.md) for exact coverage and limits.
+Local aggregate checks pass: **141 tests**. The [independent review](docs/INDEPENDENT_REVIEW.md) records the final findings and repairs. An independent Python tuple oracle validates 2,193 compiled cases, including 1,692 exhaustive small cases and 480 seeded cases; it also rejects 17 deliberately corrupted outputs. See [verification](docs/verification.md) for exact coverage and limits.
 
 The 19 sandboxed browser scenarios are authored but have **not yet run** in the current local verification stage. Screenshots, PDF layout, actual consumer import/rendering and screen-reader behavior are not claimed as verified. The added Plotly scenario will render five synthetic exported figures and record schema acceptance separately from visible zero/empty behavior.
 

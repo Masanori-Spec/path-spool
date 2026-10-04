@@ -1,5 +1,9 @@
 import {compile,validateProject} from './core.mjs';
 export const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// Plotly's text parser decodes amp/lt/gt but leaves quot and numeric quote
+// entities visible. These are text values, never HTML attributes: preserve
+// literal quotes while escaping the characters that can introduce markup.
+export const escapePlotlyText=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 const json=x=>JSON.stringify(x,null,2)+'\n';
 export function csv(records,mode='machine'){
   if(!['machine','spreadsheet'].includes(mode))throw new Error('Unknown CSV mode');
@@ -12,7 +16,7 @@ export function csv(records,mode='machine'){
 export const projectJSON=p=>json(validateProject(p));
 export function plotlyFigure(result){
   const index=new Map(result.nodes.map(n=>[n.id,n.index]));
-  return {data:[{type:'sankey',orientation:'h',valueformat:'.0f',node:{pad:18,thickness:16,label:result.nodes.map(n=>escapeHTML(`${n.id} · ${n.displayLabel??(n.missing?'∅ missing':n.label)}`)),customdata:result.nodes.map(n=>({id:n.id,stage:n.stage+1,label:n.label,displayLabel:n.displayLabel,missing:n.missing}))},link:{source:result.links.map(l=>index.get(l.source)),target:result.links.map(l=>index.get(l.target)),value:result.links.map(l=>l.value),customdata:result.links.map(l=>({id:l.id,boundary:l.boundary+1,rows:l.rows}))}}],layout:{title:{text:escapeHTML(result.title)},font:{family:'Arial, sans-serif',size:12},meta:{generator:'PathSpool 0.1.0',policy:result.policy,stageNames:result.stages,limitation:'Adjacent links do not encode full-path correlation. Retain normalized paths and contributions.'}}};
+  return {data:[{type:'sankey',orientation:'h',valueformat:'.0f',node:{pad:18,thickness:16,label:result.nodes.map(n=>escapePlotlyText(`${n.id} · ${n.displayLabel??(n.missing?'∅ missing':n.label)}`)),customdata:result.nodes.map(n=>({id:n.id,stage:n.stage+1,label:n.label,displayLabel:n.displayLabel,missing:n.missing}))},link:{source:result.links.map(l=>index.get(l.source)),target:result.links.map(l=>index.get(l.target)),value:result.links.map(l=>l.value),customdata:result.links.map(l=>({id:l.id,boundary:l.boundary+1,rows:l.rows}))}}],layout:{title:{text:escapePlotlyText(result.title)},font:{family:'Arial, sans-serif',size:12},meta:{generator:'PathSpool 0.1.0',policy:result.policy,stageNames:result.stages,limitation:'Adjacent links do not encode full-path correlation. Retain normalized paths and contributions.'}}};
 }
 export function guideHTML(p,result){
   const e=escapeHTML;
